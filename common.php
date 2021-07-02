@@ -1,8 +1,8 @@
 <?php
 $host = 'db';
-$user = 'devuser';
-$password = 'devpwd';
-$db_name = 'dbdev';
+$user = $_ENV['MYSQL_USER'];
+$password = $_ENV['MYSQL_PASSWORD'];
+$db_name = $_ENV['MYSQL_DATABASE'];
 
 $dbh = new PDO('mysql:host='.$host.';dbname='.$db_name, $user, $password);
 

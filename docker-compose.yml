@@ -23,21 +23,12 @@ services:
     image: mariadb:10
     restart: always
     container_name: mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpwd
-      MYSQL_USER: devuser
-      MYSQL_PASSWORD: devpwd
-      MYSQL_DATABASE: dbdev
     volumes:
       - ./data/db:/var/lib/mysql
 
   dbadmin:
     image: phpmyadmin/phpmyadmin
     restart: always
-    environment:
-      PMA_HOST: db
-      PMA_USER: root
-      PMA_PASSWORD: rootpwd
     depends_on:
       - db
     ports:

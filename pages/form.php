@@ -29,6 +29,7 @@ if (isset($_POST['submit'])) {
           echo "<span class=\"error\">".$err."</span>";
         }
       ?>
+      <a href="../">Home</a>
     </form>
   </body>
 </html>
